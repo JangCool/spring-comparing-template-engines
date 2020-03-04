@@ -23,10 +23,10 @@
 		<handlebars.version>4.1.2</handlebars.version>
 		<chunk.version>3.5.0</chunk.version>
 		<chunk-springmvc.version>0.1.0</chunk-springmvc.version>
-		<freemarker.version>2.3.28</freemarker.version>
+		<freemarker.version>2.3.29</freemarker.version>
 		<httl-springmvc.version>1.0.11</httl-springmvc.version>
-		<velocity.version>1.7</velocity.version>
-		<velocity-tools.version>2.0</velocity-tools.version>
+		<velocity.version>2.2</velocity.version>
+		<velocity-tools.version>3.0</velocity-tools.version>
 		<spring-jade4j.version>1.2.7</spring-jade4j.version>
 		<mustache-spring-view.version>1.4</mustache-spring-view.version>
 		<mustache-java.version>0.9.5</mustache-java.version>
@@ -45,7 +45,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.4.RELEASE</version>
+		<version>2.2.5.RELEASE</version>
 		<relativePath />
 	</parent>
 
@@ -164,7 +164,7 @@
 		<dependency>
 			<groupId>org.apache.velocity</groupId>
 			<artifactId>velocity-engine-core</artifactId>
-			<version>2.0</version>
+			<version>2.2</version>
 		</dependency>
 
 		<dependency>
