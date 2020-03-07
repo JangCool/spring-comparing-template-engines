@@ -193,3 +193,63 @@ In case you still run into problem you might want to read [this thread](http://s
 ## Contributing
 
 In case you see an improvement to the benchmark or know about ways to improve the results, please file an issue and send a pull request.
+
+
+## Benchmarks 30.2020
+
+Mustache는 VIEW 역할만 강조하는 철학이 실제 템플릿을 이용할 방법과 차이가 있어서 테스트 하지 않았습니다.
+
+JSP가 제일 빠르고 Freemarker, Velocity, Thymeleaf, Handlebars 순서로 성능 차이가 났습니다.
+
+JSP가 제일 빠르지만 JSTL 및 SCRIPTLET을 사용할 수밖에 없는 상황이 생기는데 이러한 점이 싫다면
+몇년만에 업데이트가 된 Freemarker를 추천 합니다. 
+
+Thymeleaf는 유명세 만큼 성능은 보여 주질 않았으며 가장 실망스러운 결과 였습니다.
+WAS서버 없이 화면출력이 가능 하다는 장점이 있으나 실제 개발할 때 WAS재기동 하지 않아야 되는 상황이 얼마나 될까요?
+
+그리고 Thymeleaf는 Front Framework 사용 시 속성에서 처리하는 로직이 중복 됨에 따라 오히려 복합도가 증가하는 상황이 생겻습니다.
+이러한 이유로 Thymeleaf는 템플릿 사용 대상 목록에서 제외 하였습니다.
+
+템플릿 사용에는 정답이 없으며 이 결과가 결정하는데 도움이 되었으면 합니다.
+
+------------------------------------------------
+
+I live in Korea and only measured what I needed.
+
+I updated some template versions.
+As with the previous tests, there is no change in rank.
+
+velocity   - latest version
+freemarker - latest version
+thymeleaf  - latest version(not change)
+handlebars - latest version(not change)
+
+Test Environment: Docker(centos 7 latest)
+
+https://hub.docker.com/r/zerocooldog/centos-java-tmpl
+
+These tests were done on a local machine with the following specs:
+
+```
+Spring-Boot: 2.2.5.RELEASE
+Windows 10 (1803, build: 17134.706)
+3,59 GHz AMD Ryzen 7 3700X 8-Core Processor
+openjdk version "11.0.6" 2020-01-14 LTS
+OpenJDK Runtime Environment 18.9 (build 11.0.6+10-LTS)
+OpenJDK 64-Bit Server VM 18.9 (build 11.0.6+10-LTS, mixed mode, sharing)
+Apache Tomcat 9.0.17
+```
+
+Results in order (high to low):
+
+Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
+
+```
+Handlebars              161.8 seconds
+Velocity                27.49 seconds
+Thymeleaf               18.33 seconds
+Freemarker              14.74 seconds
+JSP                     11.22 seconds
+```
+
+
