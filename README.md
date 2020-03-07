@@ -241,7 +241,7 @@ Windows 10 (1803, build: 17134.706)
 openjdk version "11.0.6" 2020-01-14 LTS
 OpenJDK Runtime Environment 18.9 (build 11.0.6+10-LTS)
 OpenJDK 64-Bit Server VM 18.9 (build 11.0.6+10-LTS, mixed mode, sharing)
-Apache Tomcat 9.0.17
+Apache Tomcat 9.0.31
 ```
 
 Results in order (high to low):
