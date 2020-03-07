@@ -247,11 +247,13 @@ Results in order (high to low):
 Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
 ```
-Handlebars              161.8 seconds
-Velocity                27.49 seconds
-Thymeleaf               18.33 seconds
-Freemarker              14.74 seconds
-JSP                     11.22 seconds
+Handlebars              63.21 seconds
+Thymeleaf               11.06 seconds
+Velocity                09.95 seconds
+Freemarker              06.19 seconds
+JSP                     05.05 seconds
 ```
+
+
 
 
