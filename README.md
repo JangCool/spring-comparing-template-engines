@@ -254,7 +254,7 @@ Freemarker              06.19 seconds
 JSP                     05.05 seconds
 ```
 
-## Performance Result ScreenShot
+## Result ScreenShot
 
 ![java_test_performance](./java_template_performance.png?raw=true)
 
