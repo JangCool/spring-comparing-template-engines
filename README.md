@@ -221,13 +221,6 @@ I live in Korea and only measured what I needed.
 I updated some template versions.
 As with the previous tests, there is no change in rank.
 
-$ ab -n 25000 -c 25 -l http://localhost:8080/velocity
-$ ab -n 25000 -c 25 -l http://localhost:8080/freemarker
-$ ab -n 25000 -c 25 -l http://localhost:8080/thymeleaf
-$ ab -n 25000 -c 25 -l http://localhost:8080/handlebars
-$ ab -n 25000 -c 25 -l http://localhost:8080/jsp
-
-
 ```
 velocity   - latest version
 freemarker - latest version
@@ -252,6 +245,14 @@ Apache Tomcat 9.0.31
 ```
 
 Results in order (high to low):
+
+```
+$ ab -n 25000 -c 25 -l http://localhost:8080/velocity
+$ ab -n 25000 -c 25 -l http://localhost:8080/freemarker
+$ ab -n 25000 -c 25 -l http://localhost:8080/thymeleaf
+$ ab -n 25000 -c 25 -l http://localhost:8080/handlebars
+$ ab -n 25000 -c 25 -l http://localhost:8080/jsp
+```
 
 Total time taken for processing 25.000 requests with a concurrency level of 25. (lower is better)
 
