@@ -221,6 +221,13 @@ I live in Korea and only measured what I needed.
 I updated some template versions.
 As with the previous tests, there is no change in rank.
 
+$ ab -n 25000 -c 25 -l http://localhost:8080/velocity
+$ ab -n 25000 -c 25 -l http://localhost:8080/freemarker
+$ ab -n 25000 -c 25 -l http://localhost:8080/thymeleaf
+$ ab -n 25000 -c 25 -l http://localhost:8080/handlebars
+$ ab -n 25000 -c 25 -l http://localhost:8080/jsp
+
+
 ```
 velocity   - latest version
 freemarker - latest version
